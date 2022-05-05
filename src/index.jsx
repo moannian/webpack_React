@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app';
 import { BrowserRouter as Router } from "react-router-dom"
-const Test = function () {
+const Root = function () {
         return (<>
                 <Router>
                         <App />
                 </Router>
         </>)
 }
-ReactDOM.render(<Test />, document.getElementById('root'));
+ReactDOM.render(<Root />, document.getElementById('root'));

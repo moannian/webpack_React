@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route, useNavigate, NavigateOptions } from "react-router-dom";
 import Count from "../components/conunt"
-import Home from "../components/Home"
+import Home from "../page/Home/Home"
 import Error404 from "../components/Error404"
 export const AppRouter = () => {
     const navigate = useNavigate();
