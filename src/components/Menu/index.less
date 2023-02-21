@@ -1,0 +1,49 @@
+.menu {
+    width: 238px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 100;
+
+    .menuItem {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        padding: 0 10px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #fff;
+        cursor: pointer;
+        transition: background .2s;
+
+        &:hover {
+            background-color: rgba(147, 144, 144, .1);
+
+            .suffix {
+                display: block;
+            }
+
+            .menu {
+                display: block;
+            }
+        }
+
+        .title {
+            flex: 1;
+            margin-left: 10px;
+
+        }
+
+        .suffix {
+            display: none;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            left: -100%;
+            top: 0;
+        }
+    }
+}

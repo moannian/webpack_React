@@ -1,18 +1,53 @@
 import React, { useEffect } from 'react';
-import { Provider } from "react-redux"
-import 'antd/dist/antd.css';
-import store from "./store/index";
-import "./mock/index"
-import "./style/index"
-import { AppRouter } from "./Router/index"
+import { AppRouter } from "./Router/index";
+import useHttp from 'Http/useHttp';
+import { getStoredAuthToken } from "shared/utils/authToken"
+import { Provider as MobxProvider } from "mobx-react"
+import Loading from './components/loading';
+import store from "./mobx/store"
+
+import "./style/component.less"
+import "./style/index.css"
+
+
 const App = () => {
     const { Router, skipPath } = AppRouter()
-    useEffect(() => { skipPath("/home") }, [])
-    return (
+    const { postData, data } = useHttp<{ code: number }>("/api/verifyToken", false)
+    const { postData: postMe, data: dataMe } = useHttp<any>("/api/me", false)
 
-        <Provider store={store}>
+    useEffect(() => {
+        let token = getStoredAuthToken()
+        if (token) {
+            postData({
+                token
+            })
+        } else {
+            skipPath("/login")
+        }
+    }, [])
+
+    useEffect(() => {
+        let token = getStoredAuthToken()
+        if (data && data?.code != 200) {
+            skipPath("/login")
+        } else {
+            postMe({ token })
+            skipPath(location.pathname)
+        }
+
+    }, [data])
+
+
+    useEffect(() => {
+        console.log(dataMe, "dataMe")
+        store.userInfo.getUserInfo(dataMe)
+    }, [dataMe])
+
+    return (
+        <MobxProvider {...store}>
             {Router}
-        </Provider>
+            <Loading />
+        </MobxProvider>
     )
 }
 

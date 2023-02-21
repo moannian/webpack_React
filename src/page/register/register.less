@@ -1,0 +1,46 @@
+@import "../../style/component.less";
+
+
+.register {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://cdn.pingcode.com/static/pc-charm/signup-background.149e31a01e8461fd.png");
+    background-size: 100% auto;
+
+    .logo {
+
+        width: 40vw;
+        text-align: right;
+
+        .text {
+            padding-left: 25px;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #000;
+        }
+    }
+
+    .form {
+        width: 60vw;
+        padding-left: 15vw;
+        text-align: center;
+
+        .card {
+            .Card(480px);
+            .lable(18px, 0 0)
+        }
+
+        .input {
+            .Input(100%, 45px)
+        }
+
+        .lable(18px, 0 0);
+
+        .button {
+            .Button(100%, 60px)
+        }
+    }
+}

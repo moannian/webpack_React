@@ -72,9 +72,16 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: ['.ts', '.tsx', '.js', '.jsx', ".png", ".jpg", "gif", ".css", ".less"],
+        extensions: ['.tsx', '.ts', '.js', '.jsx', ".png", ".jpg", "gif", ".css", ".less"],
         alias: {
-            "@": path.resolve(__dirname, "../src")
+            "@": path.resolve(__dirname, "..", "src"),
+            "shared": path.resolve(__dirname, "..", "src", "shared"),
+            "page": path.resolve(__dirname, "..", "src", "page"),
+            "Router": path.resolve(__dirname, "..", "src", "Router"),
+            "Http": path.resolve(__dirname, "..", "src", "Http"),
+            "components": path.resolve(__dirname, "..", "src", "components"),
+            "util": path.resolve(__dirname, "..", "src", "util"),
+            "assing": path.resolve(__dirname, "..", "src", "assing")
         }
     }
 };

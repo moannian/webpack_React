@@ -1,0 +1,36 @@
+.Card(@width) {
+    width: @width;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: -2px -2px 3px rgba(155, 154, 154, .1), 2px 2px 3px rgba(155, 154, 154, .1);
+}
+
+.Input(@width, @height) {
+    width: @width;
+    height: @height;
+    font-size: 18px;
+
+    .ant-input {
+        font-size: 18px;
+    }
+}
+
+.lable(@size, @padding) {
+    .ant-form-item-label>label {
+        font-size: @size;
+        padding: @padding
+    }
+
+    .ant-col-offset-1 {
+        margin-left: 0px;
+    }
+}
+
+.Button(@width, @height) {
+    width: @width;
+    height: @height;
+    font-size: 18px;
+}
+
+
+@bg-color: #ffaabb;

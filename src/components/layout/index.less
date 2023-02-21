@@ -1,0 +1,201 @@
+.layout {
+    height: 100vh;
+    color: #DDDDDD !important;
+
+    .top {
+        display: flex;
+        height: 70px;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 32px;
+            height: 32px;
+        }
+
+        p {
+            padding: 0;
+            margin: 0;
+            font-size: 18px !important;
+            // line-height: 70px;
+
+
+        }
+    }
+
+    .sider {
+        background-color: #48525c;
+        width: 240px;
+
+        .meun {
+            color: #DDD;
+            background-color: #48525c;
+            font-size: 18px;
+        }
+    }
+
+    .site-layout {
+        .site-layout-header {
+            display: flex;
+            background-color: #fff;
+            align-items: center;
+
+            .title {
+                display: flex;
+                margin-left: 12px;
+                width: 10vw;
+                margin-right: 10vw;
+
+
+                .icon {
+                    font-size: 24px;
+                    color: red;
+                    margin-right: 5px;
+                }
+
+                .label {
+                    color: #000;
+                    font-size: 16px;
+                    font-weight: 300;
+                }
+            }
+
+            .search {
+                text-align: right;
+                width: 43vw;
+
+                .focus_search {
+                    width: 280px;
+                    height: 32px;
+                    border-radius: 16px;
+                }
+
+                .blur_search {
+                    width: 200px;
+                    height: 32px;
+                    border-radius: 16px;
+                }
+            }
+
+            .more {
+                flex: 1;
+                margin-right: 20px;
+                display: flex;
+                justify-content: flex-end;
+
+                .icon {
+                    font-size: 24px;
+                    color: skyblue;
+                }
+            }
+
+            .guide {
+                flex: 1;
+                margin-right: 24px;
+                display: flex;
+                justify-content: flex-end;
+
+
+                .icon {
+
+                    font-size: 20px;
+                }
+            }
+
+            .remind {
+                flex: 1;
+                margin-right: 20px;
+                display: flex;
+                justify-content: flex-end;
+
+
+                .icon {
+                    font-size: 20px;
+                }
+            }
+
+            .userInfo {
+                flex: 1;
+                margin-right: 20px;
+                display: flex;
+                justify-content: flex-end;
+
+                .userIcon {
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 50%;
+                    background-color: plum;
+                    text-align: center;
+                    line-height: 28px;
+                }
+            }
+        }
+
+        .content {
+            position: relative;
+        }
+    }
+
+    .ant-layout-sider-trigger {
+        background-color: #48525c;
+    }
+}
+
+.a {
+    color: red;
+}
+
+.userCard {
+    .card {
+        padding: 0 !important;
+        width: 25vw;
+    }
+
+    .title {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 30vh;
+
+        .img {
+            width: 100%;
+            height: 15vh;
+            overflow: hidden;
+
+
+            img {
+                height: 100%;
+            }
+        }
+
+        .content {
+            height: 15vh;
+            padding-top: 3vw;
+            font-size: 22px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .ciecle {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 6vw;
+            height: 6vw;
+            border-radius: 50%;
+            line-height: 6vw;
+            text-align: center;
+            background-color: plum;
+            z-index: 1000;
+        }
+    }
+
+    .ant-card-head {
+        padding: 0;
+    }
+
+    .ant-card-head-title {
+        padding: 0;
+    }
+}
